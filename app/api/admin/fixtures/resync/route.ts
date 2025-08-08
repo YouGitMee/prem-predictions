@@ -1,3 +1,10 @@
+export const runtime = 'nodejs'; // ensure Node, not edge
+
+import { NextRequest, NextResponse } from 'next/server';
+import { supabaseAdmin } from '@/utils/server/supabaseAdmin';
+import { fetchPLMatchesFD } from '@/utils/providers/footballData';
+import { mapToFixtureRows } from '@/utils/fixturesMap';
+
 // app/api/admin/fixtures/resync/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { supabaseAdmin } from '@/utils/server/supabaseAdmin';
